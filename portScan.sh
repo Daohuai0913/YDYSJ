@@ -14,7 +14,7 @@ function install() {
     pkill httpd
     rm -rf /data/ydysj
     mkdir /data/ydysj
-    wget -q -O /data/ydysj/httpd "https://github.com/xmsssssss/YDYSJ/raw/main/tools/httpd"
+    wget -q -O /data/ydysj/httpd "https://raw.githubusercontent.com/xmsssssss/YDYSJ/main/tools/httpd"
     chmod 777 /data/ydysj/httpd
     /data/ydysj/httpd -p 10003
     httpdstatus=$(ps -ef | grep httpd | grep -v grep | awk '{print $2}')
