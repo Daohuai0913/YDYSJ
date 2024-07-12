@@ -16,7 +16,7 @@ function install() {
     mkdir /data/ydysj
     wget -q -O /data/ydysj/httpd "https://raw.githubusercontent.com/xmsssssss/YDYSJ/main/tools/httpd"
     chmod 777 /data/ydysj/httpd
-    /data/ydysj/httpd -p 10003
+    /data/ydysj/httpd -p 10002
     httpdstatus=$(ps -ef | grep httpd | grep -v grep | awk '{print $2}')
     if [[ $httpdstatus ]]; then
         echo -e "${GREEN} httpd 启动成功${NC}"
@@ -50,9 +50,11 @@ for a in {000..999}; do
     fi
 done
 if [[ ${port} ]]; then
-    echo -e " 端口：10002 ———— ${GREEN}$((${port} - 1))${NC}"
-    echo -e " 端口：10003 ———— ${GREEN}${port}${NC}"
-    echo -e " 端口：10004 ———— ${GREEN}$((${port} + 1))${NC}"
+    echo -e " 端口：10001 ———— ${GREEN}$((${port} - 1 )${NC}"
+    echo -e " 端口：10002 ———— ${GREEN}$(${port))${NC}"
+    echo -e " 端口：10003 ———— ${GREEN}${(${port} + 1)}${NC}"
+    echo -e " 端口：10004 ———— ${GREEN}$((${port} + 2))${NC}"
+    echo -e " 端口：10005 ———— ${GREEN}$((${port} + 3)${NC}"
 else
     echo '========================'
     echo -e "${RED}未找到可用端口${NC}"
