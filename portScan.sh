@@ -52,8 +52,9 @@ done
 if [[ ${port} ]]; then
     echo -e " 端口：10002 ———— ${GREEN}${port}${NC}"
     echo -e " 端口：10003 ———— ${GREEN}${(${port} + 1)}${NC}"
-    echo -e " 端口：10004 ———— ${GREEN}$((${port} + 2))${NC}"
-    echo -e " 端口：10005 ———— ${GREEN}$((${port} + 3))${NC}"
+    echo -e " 端口：10004 ———— ${GREEN}${(${port} + 2)}${NC}"
+    echo -e " 端口：10005 ———— ${GREEN}${(${port} + 3)}${NC}"
+
 else
     echo '========================'
     echo -e "${RED}未找到可用端口${NC}"
